@@ -1,0 +1,3 @@
+# Estudo de Python para Data Science
+
+Este repositório documenta meu estudo de Python focado em aplicações para Data Science. O objetivo é aprofundar conhecimentos em programação, análise de dados, manipulação de dados com bibliotecas como Pandas e NumPy, visualização com Matplotlib e Seaborn, além de explorar conceitos de machine learning. Ao longo deste processo, serão incluídos exemplos práticos, anotações e projetos desenvolvidos para fixação dos conceitos aprendidos.
