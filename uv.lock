@@ -2626,6 +2626,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "basedosdados" },
+    { name = "matplotlib" },
     { name = "pandas" },
     { name = "pycaret" },
     { name = "scikit-learn" },
@@ -2639,6 +2640,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "basedosdados", specifier = ">=2.0.2" },
+    { name = "matplotlib", specifier = ">=3.7.5" },
     { name = "pandas", specifier = ">=2.1.4" },
     { name = "pycaret", specifier = ">=3.3.2" },
     { name = "scikit-learn", specifier = ">=1.4.2" },
