@@ -1,0 +1,50 @@
+INÍCIO
+
+  // 1. Inicialização
+  lista_de_palavras ← ["banana", "computador", "python", "universo", "programacao"]
+  palavra_secreta ← escolher_aleatoriamente(lista_de_palavras)
+  tamanho ← comprimento(palavra_secreta)
+  letras_exibidas ← vetor_de("_", tamanho)      // ex.: ["_", "_", "_", "_", "_"]
+  tentativas_restantes ← 6                      // número de chances antes de perder
+  letras_chutadas ← conjunto_vazio()            // para registrar chutes repetidos
+
+  // 2. Loop principal do jogo
+  ENQUANTO tentativas_restantes > 0 E "_" em letras_exibidas FAÇA
+
+    exibir("Palavra: ", juntar(letras_exibidas, " "))  
+    exibir("Tentativas restantes: ", tentativas_restantes)
+    exibir("Letras já chutadas: ", ordenar(letras_chutadas))
+
+    chute ← ler_input_unica_letra()
+
+    SE chute em letras_chutadas ENTÃO
+      exibir("Você já tentou a letra '", chute, "'. Tente outra.")
+      CONTINUAR  
+    FIM SE
+
+    adicionar(chute, letras_chutadas)
+
+    SE chute está em palavra_secreta ENTÃO
+      // Revela todas as posições da letra
+      PARA i de 0 até tamanho-1 FAÇA
+        SE palavra_secreta[i] = chute ENTÃO
+          letras_exibidas[i] ← chute
+        FIM SE
+      FIM PARA
+    SENÃO
+      tentativas_restantes ← tentativas_restantes - 1
+      exibir("Letra incorreta!")
+    FIM SE
+
+    exibir_linha_em_branco()
+
+  FIM ENQUANTO
+
+  // 3. Resultado final
+  SE "_" NÃO em letras_exibidas ENTÃO
+    exibir("🎉 Parabéns! Você acertou a palavra: ", palavra_secreta)
+  SENÃO
+    exibir("💀 Game Over! A palavra era: ", palavra_secreta)
+  FIM SE
+
+FIM
