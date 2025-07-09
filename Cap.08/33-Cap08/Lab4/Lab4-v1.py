@@ -83,7 +83,7 @@ class Hangman:
         print_status(): exibe o tabuleiro e estado atual do jogo
     """
 
-    def __init__(self, word_list, max_errors=2):
+    def __init__(self, word_list, max_errors=6):
         # Seleciona aleatoriamente a palavra secreta
         self.word = random.choice(word_list).lower()
         # Inicializa coleções de letras chutadas
