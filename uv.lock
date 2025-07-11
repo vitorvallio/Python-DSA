@@ -1705,6 +1705,7 @@ dependencies = [
     { name = "pycaret" },
     { name = "scikit-learn" },
     { name = "seaborn" },
+    { name = "statsmodels" },
 ]
 
 [package.dev-dependencies]
@@ -1719,6 +1720,7 @@ requires-dist = [
     { name = "pycaret", specifier = ">=3.3.2" },
     { name = "scikit-learn", specifier = ">=1.4.2" },
     { name = "seaborn", specifier = ">=0.13.2" },
+    { name = "statsmodels", specifier = ">=0.14.4" },
 ]
 
 [package.metadata.requires-dev]
