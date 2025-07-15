@@ -13,6 +13,7 @@ dependencies = [
     "requests>=2.32.4",
     "scikit-learn>=1.4.2",
     "seaborn>=0.13.2",
+    "shiny>=1.4.0",
     "statsmodels>=0.14.4",
     "tensorflow>=2.18.1",
 ]
